@@ -5,8 +5,8 @@
 
 
 All trees were built by BEAST 2 based on amino acid sequences and insertion modules.  There are three analyses:
-- `class1` - Class I catalytic domain. Contains the same analyses performed by Douglas 2024
-- `class2` - Class II catalytic domain. Contains the same analyses performed by Douglas 2024
+- `class1` - Class I catalytic domain. Contains the same analyses performed by Douglas et al. 2024
+- `class2` - Class II catalytic domain. Contains the same analyses performed by Douglas et al. 2024
 - `class1_lys_variant` - Class I catalytic domain but with the LysRS insertion module assumed to be derived from the Z fold
 
 
