@@ -8,7 +8,7 @@ The order of amino acid recruitment in Table 1 is a revision of Wehbi et al.
 (2024) *Proc. Natl. Acad. Sci. USA* **121**:e2410311121. The **base method** —
 Pfam age classification, ancestral sequence reconstruction, and clan-level amino
 acid usage — is unchanged from that paper, and its code lives at
-[sawsanwehbi/Pfam-age-classification](https://github.com/sawsanwehbi/Pfam-age-classification).
+[sawsanwehbi/Pfam-age-classification](https://github.com/sawsanwehbi/Pfam-age-classification). Pfam sequences, alignments, trees and protein-ID mappings can be found at https://figshare.com/projects/Pfam-age-classification-data/201630
 The modification made here is to the post-LUCA control
 denominator only, and is implemented in `Scatter_Plots.R` — see
 "Modification to Wehbi et al. (2024)" below.
@@ -16,11 +16,12 @@ denominator only, and is implemented in `Scatter_Plots.R` — see
 ## Contents
 
 | Path | What it is |
-| `<<AncientPostLUCA.csv>>` | Post-LUCA pfams reclassified as either pre-LACA or pre-LBCA |
+|---|---|
+| `AncientPostLUCA.csv` | Post-LUCA pfams which include LACA, LBCA and those reclassified as either pre-LACA or pre-LBCA based on the presence of 2 LBCA or LACA nodes branching near the root |
 | `AA_properties_Fig1_SupFig1.csv` | Per-amino-acid data for Figures 1, 6 and Supplementary Figure 1. See the data dictionary below |
 | `Scatter_Plots.R` | Applies the revised post-LUCA denominator and produces the Table 1 values and plots Figures 1a, 1b, 6 and Supplementary Figure 1 |
 | `phylogenetics/` | BEAST 2 analyses of the Class I and Class II aaRS catalytic domains (Figure 5, Supplementary Files 3–4). See `phylogenetics/README.md` |
-| `sessionInfo.txt` | R and package versions used |
+
 
 ## Modification to Wehbi et al. (2024)
 
@@ -48,9 +49,10 @@ method differs from Wehbi et al. (2024).
 ## Reproducing the figures
 
 ```r
-install.packages(c("ggplot2", "broom", "common"))
-source("Scatter_Plots.R")   # reads Clan_data_ancestralAAC.csv, Pfam_data_ancestralAAC.csv, AncientPostLUCA.csv and
-AA_properties_Fig1_SupFig1.csv from this directory
+install.packages(c("ggplot2", "broom", "common", "matrixStats", "diagis"))
+# reads Clan_data_ancestralAAC.csv, Pfam_data_ancestralAAC.csv,
+# AncientPostLUCA.csv and AA_properties_Fig1_SupFig1.csv from this directory
+source("Scatter_Plots.R")
 ```
 
 ## Data dictionary: `AA_properties_Fig1_SupFig1.csv`
