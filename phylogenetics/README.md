@@ -23,20 +23,31 @@ Each directory contains:
 - An `.xml` file with the BEAST 2 model and data.
 
 
+
+
+### Relationships to Supplementary files in main article
+
+- *Supplementary File 3* is `class1_lys_variant/class1.clades.txt`.
+- *Supplementary File 4* is `class2/class2.clades.txt`.
+
+
 ## The one modification (`class1_lys_variant`)
 
 Douglas et al. (2024) scored the short three-stranded antiparallel β-sheet insertion module ("Z") as absent from LysRS-I, and treated the longer LysRS-I insert as a module of independent origin. Here we instead treat the LysRS-I insert as derived from the Z fold, with a second, unique insertion module built on top of it (Figure 4 of the paper). Since TrpRS and TyrRS are the only Class I families that lack the Z fold, this lowers support for LysRS-I being sister to those two.
+
+
+
 
 ## Where each posterior support quoted in the paper comes from
 
 | Statement in the paper | Clade | File | Value |
 |---|---|---|---|
-| ArgRS in a clade with the CysRS/MetRS/LeuRS/ValRS/IleRS subclass, 0.43 | `{ArgRS,CysRS,IleRS,LeuRS-A,LeuRS-B,MetRS,ValRS}` | `class1/class1.clades.txt` | 0.427 |
+| ArgRS in a clade with the CysRS/MetRS/LeuRS/ValRS/IleRS subclass, 0.43 | `{ArgRS,CysRS,IleRS,LeuRS-A,LeuRS-B,MetRS,ValRS}` | `class1/class1.clades.txt` | 0.434 |
 | LysRS-I in a clade with TyrRS/TrpRS, 0.52 | `{LysRS-I,TrpRS,TyrRS}` | `class1/class1.clades.txt` | 0.521 |
 | ArgRS/LysRS-I clade, before 0.13 | `{ArgRS,LysRS-I}` | `class1/class1.clades.txt` | 0.128 |
 | …rose to 0.30 | `{ArgRS,LysRS-I}` | `class1_lys_variant/class1.clades.txt` | 0.301 |
 | Both within a clade with GlxRS, 0.16 | `{ArgRS,GlnRS,GluRS-B,GluRS-E,GlxRS-A,GlxRS-B,LysRS-I}` | `class1_lys_variant/class1.clades.txt` | 0.161 |
-| …vs 0.02 in Douglas et al. (2024) | same clade | `class1/class1.clades.txt` | 0.019 |
+| …vs 0.02 in Douglas et al. (2024) | same clade | `class1/class1.clades.txt` | 0.0209 |
 | Both in a clade with the CVILM-RSs, 0.22 | `{ArgRS,CysRS,IleRS,LeuRS-A,LeuRS-B,LysRS-I,MetRS,ValRS}` | `class1_lys_variant/class1.clades.txt` | 0.221 |
 | AGT(S)-RS ancestral to GlyRS-arch, GlyRS-euk and SerRS, 85% | `{GlyRS-A,GlyRS-E,SerRS}` | `class2/class2.clades.txt` | 0.850 |
 | SerRS-arch an outlier to the SerRS/ProRS/ThrRS/GlyRS clade, 61% | `{GlyRS-A,GlyRS-E,ProRS-A,ProRS-B,ProRS-M,SerRS,ThrRS}` | `class2/class2.clades.txt` | 0.615 |
