@@ -49,7 +49,7 @@ method differs from Wehbi et al. (2024).
 ## Reproducing the figures
 
 ```r
-install.packages(c("ggplot2", "broom", "common", "matrixStats", "diagis"))
+install.packages(c("ggplot2", "broom", "common", "matrixStats", "gridExtra", "diagis" ))
 # reads Clan_data_ancestralAAC.csv, Pfam_data_ancestralAAC.csv,
 # AncientPostLUCA.csv and AA_properties_Fig1_SupFig1.csv from this directory
 source("Scatter_Plots.R")
