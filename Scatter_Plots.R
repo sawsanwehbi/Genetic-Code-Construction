@@ -3,6 +3,7 @@ library(ggplot2)
 library(broom)
 library(matrixStats)
 library(diagis)
+library(gridExtra)
 
 # Data from Wehbi et al. 2024 available in sawsanwehbi/Pfam-age-classification
 Pfam_ConAAC <- read.csv('Pfam_data_ancestralAAC.csv', header = T)
