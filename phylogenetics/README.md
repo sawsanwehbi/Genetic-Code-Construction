@@ -6,7 +6,7 @@
 Supplementary analyses for Masel, Douglas, Wehbi & McShea, *The series of genetic
 codes that preceded our own*.
 
-All trees were inferred with `BEAST 2.7.8` from amino acid sequences and the presence/absence of insertion modules, following the method of Douglas et al. (2024). Branch lengths are a weighted average of insertion-module births and deaths per module, and substitutions per site. Amino acid substitutions were modelled using the   `OBAMA v1.1.1` package and module trees were constrained within the protein family tree using `StarBeast3 v1.2.1`. Insertion module evolution was captured by the `IndelDollo v0.0.1` package. MCMC chains varied in length from 10 million to 100 million states, with every 10,000 trees being logged, and burnin discarded. 
+All trees were inferred with `BEAST 2.7.8` from amino acid sequences and the presence/absence of insertion modules, following the method of Douglas et al. (2024). Branch lengths are a weighted average of insertion-module births and deaths per module, and substitutions per site. Amino acid substitutions were modelled using the   `OBAMA v1.1.1` package and module trees were constrained within the protein family tree using `StarBeast3 v1.2.1`. Insertion module evolution was captured by the `IndelDollo v0.0.1` package. MCMC chains varied in length from 10 million to 100 million states across 2 independent chains, with every 10,000 trees being logged, and burnin discarded. 
 
 
 
