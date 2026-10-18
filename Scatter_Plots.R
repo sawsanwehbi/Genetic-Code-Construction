@@ -240,3 +240,4 @@ ggplot(MinMeanDistances, aes(x = -as.numeric(LUCA_usage),y = as.numeric(min_prot
   geom_line(data= MinMeanDistances, aes(y = predict(min_model)), linewidth = 1,color = "#3464ff") +
   geom_line(data= MinMeanDistances, aes(y = predict(mean_model)), linewidth = 1,color = '#c744e8') +
   theme(axis.text=element_text(size=20), axis.title=element_text(size=30,face="bold") ) 
+ggsave("../Fig6.pdf", width = 7, height =7.5, device = cairo_pdf, dpi = 600)
