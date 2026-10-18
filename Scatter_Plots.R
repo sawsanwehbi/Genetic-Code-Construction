@@ -203,13 +203,40 @@ ggplot(MinMeanDistances, aes(x = -as.numeric(LUCA_usage),y = as.numeric(min_prot
   label = AA)) +  geom_text( size = 10) +  ylab('Distance of aaRS from protozyme') +
   xlab('LUCA clan usage') +   xlim(-1.15, -0.6) + ylim(0,8) +
   scale_x_continuous(breaks = c(-1,-0.8,-0.6), labels = -c(-1.0,-0.8,-0.6)) +
-  annotate(geom="text", x=-1, y=1, label=paste0("Mean"), color="purple", size = 11) +
-  annotate(geom="text", x=-1, y=0.5, label=paste0("rho = 0.50"), color="purple", size = 11) +
-  annotate(geom="text", x=-1, y=0, label="p = 0.03", color="purple", size = 11) + 
-  annotate(geom="text", x=-0.8, y=1, label=paste0("Minimum"), color="#0071CE", size = 11) +
-  annotate(geom="text", x=-0.8, y=0.5, label=paste0("rho = 0.38"), color="#0071CE", size = 11) +
-  annotate(geom="text", x=-0.8, y=0, label="p = 0.1", color="#0071CE", size = 11) +
-  geom_line(data= MinMeanDistances, aes(y = predict(min_model)), linewidth = 1,color = "#0071CE") +
-  geom_line(data= MinMeanDistances, aes(y = predict(mean_model)), linewidth = 1,color = 'purple') +
+  annotate(geom="text", x=-1, y=1, label=paste0("Mean"), color="#c744e8", size = 11) +
+  annotate(geom="text", x=-1, y=0.5, label=paste0("ρ = 0.50"), color="#c744e8", size = 11) +
+  annotate(geom="text", x=-1, y=0, label="p = 0.03", color="#c744e8", size = 11) + 
+  annotate(geom="text", x=-0.8, y=1, label=paste0("Minimum"), color="#3464ff", size = 11) +
+  annotate(geom="text", x=-0.8, y=0.5, label=paste0("ρ = 0.38"), color="#3464ff", size = 11) +
+  annotate(geom="text", x=-0.8, y=0, label="p = 0.1", color="#3464ff", size = 11) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'I')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'I')], label="I", color="red", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'M')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'M')], label="M", color="red", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'V')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'V')], label="V", color="red", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'L')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'L')], label="L", color="red", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'T')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'T')], label="T", color="red", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'D')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'D')], label="D", color="#3464ff", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'P')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'P')], label="P", color="#3464ff", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'F')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'F')], label="F", color="#3464ff", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'G')], 
+           y=as.numeric(MinMeanDistances$min_protozymedistance)[which(MinMeanDistances$AA == 'G')], label="G", color="#3464ff", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'D')], 
+           y=6, label="D", color="#c744e8", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'P')], 
+           y=5, label="P", color="#c744e8", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'F')], 
+           y=3.5, label="F", color="#c744e8", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'G')], 
+           y=5, label="G", color="#c744e8", size = 10) +
+  annotate(geom="text", x=-as.numeric(MinMeanDistances$LUCA_usage)[which(MinMeanDistances$AA == 'G')], 
+           y=6, label="(G)", color="#f0a29d", size = 10) +
+  geom_line(data= MinMeanDistances, aes(y = predict(min_model)), linewidth = 1,color = "#3464ff") +
+  geom_line(data= MinMeanDistances, aes(y = predict(mean_model)), linewidth = 1,color = '#c744e8') +
   theme(axis.text=element_text(size=20), axis.title=element_text(size=30,face="bold") ) 
-# cosmetic edits to this plot where made in illustrator
